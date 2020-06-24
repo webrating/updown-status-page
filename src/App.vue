@@ -13,7 +13,7 @@
             :alt="$config.website_name"
             class="logotop"
           ></a>
-          <h3>{{ $config.website_name }} Status Page</h3>
+          <h3>{{ $config.website_name }}</h3>
         </div>
       </div>
     </div>
