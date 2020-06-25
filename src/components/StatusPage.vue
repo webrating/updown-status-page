@@ -67,7 +67,7 @@
                     <p class="text-muted desc">
                       Response Time
                     </p>
-                    <span>{{ thisCheck.response_time + '%' }}</span>
+                    <span>{{ thisCheck.response + 'ms' }}</span>
                   </div>
                 </div>
                                 
