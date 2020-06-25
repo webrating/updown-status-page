@@ -58,6 +58,19 @@
                     <span>{{ thisCheck.uptime + '%' }}</span>
                   </div>
                 </div>
+                
+                 <div
+                  id="uptime"
+                  class="col-md-2"
+                >
+                  <div class="uptime">
+                    <p class="text-muted desc">
+                      Uptime
+                    </p>
+                    <span>{{ thisCheck.apdex + '%' }}</span>
+                  </div>
+                </div>
+                                
                 <div class="col-md-1">
                   <a
                     class="morelink"
