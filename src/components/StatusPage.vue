@@ -67,7 +67,7 @@
                     <p class="text-muted desc">
                       Uptime
                     </p>
-                    <span>{{ thisCheck.by_response_time + '%' }}</span>
+                    <span>{{ thisCheck.response_time + '%' }}</span>
                   </div>
                 </div>
                                 
