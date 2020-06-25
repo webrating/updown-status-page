@@ -65,7 +65,7 @@
                 >
                   <div class="uptime">
                     <p class="text-muted desc">
-                      Uptime
+                      Response Time
                     </p>
                     <span>{{ thisCheck.response_time + '%' }}</span>
                   </div>
