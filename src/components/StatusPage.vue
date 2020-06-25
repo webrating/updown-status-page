@@ -67,7 +67,7 @@
                     <p class="text-muted desc">
                       Uptime
                     </p>
-                    <span>{{ thisCheck.apdex + '%' }}</span>
+                    <span>{{ thisCheck.apdex_t + '%' }}</span>
                   </div>
                 </div>
                                 
