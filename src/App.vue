@@ -14,7 +14,7 @@
             class="logotop"
           ></a>
           <h3>{{ $config.website_name }}</h3>
-          <p>We are monitoring 20+ different web hosting companies average uptime and response time.</p>
+          <p>We are monitoring 20+ different web hosting companies uptime and response time.</p>
         </div>
       </div>
     </div>
