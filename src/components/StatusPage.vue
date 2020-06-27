@@ -67,7 +67,7 @@
                     <p class="text-muted desc">
                       Avg Response
                     </p>
-                    <span>{{ thisCheck.response + 'ms' }}</span>
+                    <span>{{ thisCheck.metrics.timings.response + ' ms' }}</span>
                   </div>
                 </div>
                                 
@@ -115,10 +115,18 @@ export default {
         const checks = await this.getChecks();
         if (checks.length > 0) {
           // filter checks that are not published or enabled
-          this.checks = checks.filter(c => {
+          const checksFiltered = checks.filter(c => {
             const isValid = c.enabled === true && c.published === true;
             return isValid;
           });
+
+          // get detailed metrics for each check and push the data to container array
+          for (const thisCheck of checksFiltered) {
+            const res = await window.fetch(`https://updown.io/api/checks/${thisCheck.token}/metrics?api-key=${this.$config.updown_read_key}`);
+            // make metrics available under 'metrics' object, and copy original check params
+            const jsonResp = await res.json()
+            this.checks.push(Object.assign({}, thisCheck, {metrics: jsonResp}));
+          }
         }
         this.lastPageUpdate = new Date();
       } catch (e) {
